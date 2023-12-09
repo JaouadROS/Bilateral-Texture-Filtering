@@ -3,10 +3,12 @@
 #include <iostream>
 
 int main() {
-    cv::Mat inputImage = cv::imread("noise4-3-2.png", cv::IMREAD_COLOR);
-    //inputImage = cv::imread("angel-5-5.png", cv::IMREAD_COLOR);
-    //inputImage = cv::imread("circle-5-7.png", cv::IMREAD_COLOR);
-    inputImage = cv::imread("compression4-5-15.png", cv::IMREAD_COLOR);
+
+    std::string imagePath = "../../images/";
+    cv::Mat inputImage = cv::imread(imagePath + "noise4-3-2.png", cv::IMREAD_COLOR);
+    //inputImage = cv::imread(imagePath + "angel-5-5.png", cv::IMREAD_COLOR);
+    //inputImage = cv::imread(imagePath + "circle-5-7.png", cv::IMREAD_COLOR);
+    inputImage = cv::imread(imagePath + "compression4-5-15.png", cv::IMREAD_COLOR);
 
     if(inputImage.empty()) {
         std::cerr << "Error: Image not found." << std::endl;

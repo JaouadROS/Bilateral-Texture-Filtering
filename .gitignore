@@ -1,3 +1,2 @@
 # Always ignore
-.DS_Store
-*~
+Cpp/build
